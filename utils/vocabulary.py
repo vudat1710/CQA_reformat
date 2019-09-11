@@ -1,3 +1,5 @@
+import random
+
 class Vocabulary:
     def __init__(self, q1s, q2s):
         self.vocab = {}
@@ -16,7 +18,7 @@ class Vocabulary:
 
         print('-------------------------------')
         print('Vocabulary with %d words created' % len(self.vocab))
-        print('Sample words from vocab: ', self.vocab[2:50])
+        print('Sample words from vocab: ', dict(random.sample(self.vocab.items(), 50)))
         print('-------------------------------')
         
     def add_word(self, word):
